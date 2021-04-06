@@ -35,7 +35,7 @@ function App() {
   return (
     <Router>
       <Container>
-        <Header />
+        <Header cartItems={cartItems}/>
         <Switch>
           <Route path="/Cart">
             <Cart cartItems={cartItems}/>
