@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Cart from './Cart'
+import { db } from './firebase'
 
 
 function CartItem( {id, item }) {
@@ -11,6 +12,13 @@ function CartItem( {id, item }) {
         
         options.push(<option value={i}> Qty: {i}</option>)
     }
+
+    const changeQuantity = (newQuantity) =>{
+        db.collection('cartItems').doc(id).update({
+            quantity: parseInt(newQuantity)
+        })
+    }
+
     return (
         <Container>
             <ImageContainer>
@@ -25,6 +33,7 @@ function CartItem( {id, item }) {
                     <CartItemQuantityContainer>
                         <select
                             value={item.quantity}
+                            onChange={(e)=>changeQuantity(e.target.value)}
                         >
                             {options}
                         </select>
