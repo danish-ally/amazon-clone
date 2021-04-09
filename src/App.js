@@ -4,7 +4,7 @@ import Header from './Header';
 import Cart from './Cart';
 import Home from './Home';
 import Login from './Login';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from 'styled-components'
 import { db, auth } from './firebase'
 

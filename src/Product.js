@@ -69,7 +69,10 @@ const Container = styled.div`
 
 `
 const Title = styled.span`
-    
+    flex-wrap: nowrap;
+    display:block;
+    width: 310px;
+
 
 `
 const Price = styled.span`
@@ -83,8 +86,8 @@ const Rating = styled.div`
     display: flex;
 `
 const Image = styled.img`
-    max-height:200px;
-    object-fit: contain;
+    max-height:200px; 
+     object-fit: contain;
 
 `
 const ActionSection = styled.div`
